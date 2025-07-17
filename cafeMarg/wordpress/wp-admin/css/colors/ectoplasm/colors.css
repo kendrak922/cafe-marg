@@ -1,0 +1,10 @@
+@use "../_admin.scss" with (
+	$scheme-name: "ectoplasm",
+	$base-color: $base-color,
+	$icon-color: #ece6f6,
+	$highlight-color: #a3b745,
+	$notification-color: #d46f15,
+
+	$form-checked: $base-color,
+);
+/*# sourceMappingURL=colors.css.map */

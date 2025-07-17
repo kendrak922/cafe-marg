@@ -1,0 +1,10 @@
+@use "../_admin.scss" with (
+	$scheme-name: "coffee",
+	$base-color: $base-color,
+	$highlight-color: #c7a589,
+	$notification-color: #9ea476,
+	$form-checked: $base-color,
+
+	$low-contrast-theme: "true"
+);
+/*# sourceMappingURL=colors.css.map */
