@@ -54,6 +54,11 @@ if ($blockData['vertical_padding']) {
     $classes[] = 'block--padding-'.$blockData['vertical_padding'];
 }
 
+if ($blockData['section_edge']) {
+    $section_edge = 'block--subwayTile';
+    $classes[] = $section_edge;
+}
+
 ?>
 
 <section id="<?php echo $blockID; ?>" class="block  <?php echo join( ' ', $classes ) ?>">

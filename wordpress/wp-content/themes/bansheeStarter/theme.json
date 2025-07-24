@@ -46,14 +46,19 @@
       ],
       "fontFamilies": [
         {
-          "fontFamily": "Aboreto",
-          "name": "Aboreto",
-          "slug": "aboreto"
+          "fontFamily": "Old Standard",
+          "name": "Old Standard TT",
+          "slug": "Old+Standard+TT"
         },
         {
-          "fontFamily": "Hina Mincho",
-          "name": "Hina Mincho",
-          "slug": "hina_mincho"
+          "fontFamily": "IBM Plex Sans",
+          "name": "IBM Plex Sans",
+          "slug": "IBM+Plex+Sans"
+        },
+        {
+          "fontFamily": "Gwendolyn",
+          "name": "Gwendolyn",
+          "slug": "gwendolyn"
         }
       ]
     },
@@ -117,14 +122,19 @@
           ],
           "fontFamilies": [
             {
-              "fontFamily": "Aboreto",
-              "name": "Aboreto",
-              "slug": "Aboreto"
+              "fontFamily": "Old Standard",
+              "name": "Old Standard TT",
+              "slug": "Old+Standard+TT"
             },
             {
-              "fontFamily": "Hina Mincho",
-              "name": "Hina Mincho",
-              "slug": "dm_serif_display"
+              "fontFamily": "IBM Plex Sans",
+              "name": "IBM Plex Sans",
+              "slug": "IBM+Plex+Sans"
+            },
+            {
+              "fontFamily": "Gwendolyn",
+              "name": "gwendolyn",
+              "slug": "gwendolyn"
             }
           ]
       },

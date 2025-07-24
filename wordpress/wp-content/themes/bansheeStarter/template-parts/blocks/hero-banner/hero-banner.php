@@ -46,21 +46,21 @@ $gap = $blockData['gap'] ? $blockData['gap'].'px;' : '';
 if (isset($block["className"])) {
     $blockData['classes'][] =  $block["className"];
 }
-$style = '';
+$style = [];
 if (isset($blockData['background_image'])) {
     $bgImage = $blockData['background_image']['url'];
-    $style =  "background-image:url($bgImage);";
+    $style[] =  "background-image:url($bgImage);";
+    $style[] = "background-position:".$blockData['image_position'].";";
 }
-
+$style = implode(' ', $style);
 $blockData['classes'][] = 'u-bgMedia';
 $blockData['classes'][] = 'container--layout container--'.$blockData['width'];
 // BLOCK :: RENDER
 ?>
 
-<section id="<?php echo $blockID; ?>" class="block block--hero-banner hero-banner <?php echo implode(' ', $blockData['classes']); ?>" style ="<?php echo $style; ?>">
+<section id="<?php echo $blockID; ?>" class="block block--hero-banner hero-banner <?php echo implode(' ', $blockData['classes']); ?>" style ="<?php  print_r($style); ?>">
     <div class="container container--ultra-wide grid" style="gap:<?php echo $gap ?>;" data-content-align-x="<?php echo $blockData['content_position'];?>">
- 
-        <div class="hero-banner__content">
+        <div class="hero-banner__content u-bgColorTertiary">
             <InnerBlocks 
                 allowedBlocks="<?php echo esc_attr(wp_json_encode($blocks_allowed)); ?>" 
                 template="<?php echo esc_attr(wp_json_encode($blocks_template)); ?>" 

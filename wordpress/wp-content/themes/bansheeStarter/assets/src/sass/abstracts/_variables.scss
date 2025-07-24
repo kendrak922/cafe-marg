@@ -85,12 +85,12 @@ $map-width-props: (
 //////////////////
 
 $color-primary:#4A3D25;
-$color-secondary: #1B5299;
+$color-secondary: #CFE4FF;
 $color-tertiary: #3C896D;
-
+$primary-hover: #8F6D50;
 // Basics
 $color-black: #1A1D18;
-$color-white: #F0FBEF;
+$color-white:#F2F5EA;
 $color-neutral: #8F6D50;
 
 $palette: (
@@ -103,8 +103,8 @@ $palette: (
   'Tertiary': $color-tertiary,
   // Text color
   'Neutral': $color-primary,
-  'LightNeutral' : #F0FBEF,
-  'Cream' : #F0FBEF,
+  'LightNeutral' : #F2F5EA,
+  'Cream' : #E6DBD0,
   'Yellow' : #FCFDAF,
   // Style Guide
   'Brown' : #8F6D50,
@@ -120,6 +120,19 @@ $palette: (
   'Success':#3C896D,
   'Error': #DB3A34,
 );
+// :root {
+//   --tec-color-accent-primary: #{$color-primary};
+//   --tec-color-background : #{$color-secondary};
+//   --tec-color-text-secondary :#{$color-white};
+//   --tec-color-button-primary : #{$color-white};
+//   --tec-color-button-primary-hover :#{$primary-hover};
+//   --tec-color-accent-primary-hover: #{$primary-hover};
+//   --tec-color-accent-primary-active: #{$primary-hover};
+//   --tec-color-button-primary-active: #{$primary-hover};
+//   --tec-color-text-event-title: #{$color-primary};
+//   --tec-color-text-primary: #{$color-primary};
+//   --tec-color-background-events-bar :  #{$color-white};
+// }
 
 
 
@@ -141,16 +154,21 @@ $font-weight-heavy: 900;
 
 // Font Stack
 $font-stack-primary: (
-  'Manrope',
+  "IBM Plex Sans", sans-serif,
+  serif
+);
+$font-stack-secondary: (
+  "Old Standard TT", serif,
   'Helvetica',
   sans-serif
 );
-$font-stack-secondary: (
-  'Parisienne',
+
+
+$font-stack-tertiary: (
+  "Gwendolyn",
   cursive
 );
 
-$font-stack-tertiary: $font-stack-primary;
 
 $font-awesome: (
   'Font Awesome 5 Pro',

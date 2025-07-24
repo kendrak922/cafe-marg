@@ -25,6 +25,7 @@
     @include font-appearance();
     color: $color;
     transition: $transition-default;
+    font-weight: 500;
     &:hover,
     &:focus {
         color: $hoverColor;
@@ -288,7 +289,7 @@ body {
 
 /***** TEXT/INLINE ELEMENTS *****/
 .txt a,
-.font--a {
+.font--a, a {
     @include default-anchor();
 }
 

@@ -1,7 +1,7 @@
 === Contact Form by Bit Form: Multi Step Form, Calculation Contact Form, Payment Contact Form & Custom Contact Form builder ===
 Plugin Name: Contact Form by Bit Form: Multi Step Form, Calculation Contact Form, Payment Contact Form & Custom Contact Form builder
-Version: 2.20.0
-Stable tag: 2.20.0
+Version: 2.20.2
+Stable tag: 2.20.2
 Author: Contact form builder by Bit form
 Author URI: https://www.bitapps.pro/
 Contributors: bitpressadmin, arif25897, mdrhmaruf, mdabbasuddin, akaioum 
@@ -41,7 +41,7 @@ Bit Form ensures optimal web and server performance with its highly optimized si
 
 ### Most advanced contact form builder plugin - Bit Form
 
-Enjoy advanced contact form features like SMTP, double opt-in, automation, and multilingual support. Integrate with popular payment gateways like PayPal, Razorpay, Stripe and Mollie for easy transactions. Ensure security with Google reCAPTCHA, Cloudflare Turnstile, honeypot spam protection. Connect forms to webhooks and other third-party apps in your workflows easily. Experience professional and efficient form creation with Bit Form, the most beginner-friendly contact form plugin in WordPress.
+Enjoy advanced contact form features like SMTP, double opt-in, automation, and multilingual support. Integrate with popular payment gateways like PayPal, Razorpay, Stripe and Mollie for easy transactions. Ensure security with Google reCAPTCHA, Cloudflare Turnstile, hCaptcha, honeypot spam protection. Connect forms to webhooks and other third-party apps in your workflows easily. Experience professional and efficient form creation with Bit Form, the most beginner-friendly contact form plugin in WordPress.
 
 #### New Era of WordPress Form Plugins: Most Advanced Contact From Builder | WP Simple Hacks
 
@@ -144,7 +144,7 @@ Enhance your WordPress forms with the Repeater Field, a dynamic feature that all
 
 ### Bit Form has the best features to offer
 
-Bit Form is the most secure and optimized WordPress contact form builder plugin, featuring the fastest drag-and-drop form builder. With Bit Form, you can easily create any type of contact forms using over 40 fully customizable fields, including 4 payment fields (PayPal, Razorpay, Stripe and Mollie). The plugin offers more than 200 integrations, such as Google Sheet, WooCommerce, Webhook, Hubspot, Fluent CRM, Active Campaign, Mailchimp, ACF, and more. It also includes advanced features like conditional logic, built-in free SMTP, double opt-in, honeypot spam protection, Google reCaptcha, Cloudflare Turnstile Captcha, WP auth, and many more.
+Bit Form is the most secure and optimized WordPress contact form builder plugin, featuring the fastest drag-and-drop form builder. With Bit Form, you can easily create any type of contact forms using over 40 fully customizable fields, including 4 payment fields (PayPal, Razorpay, Stripe and Mollie). The plugin offers more than 200 integrations, such as Google Sheet, WooCommerce, Webhook, Hubspot, Fluent CRM, Active Campaign, Mailchimp, ACF, and more. It also includes advanced features like conditional logic, built-in free SMTP, double opt-in, honeypot spam protection, Google reCaptcha, Cloudflare Turnstile Captcha, hCaptcha, WP auth, and many more.
 
 ### Highly customizable form styling with the most advanced style editor in WordPress
 
@@ -525,6 +525,7 @@ Yes, Bit Form has built-in spam protection better than any other Contact Form Bu
 - reCAPTCHA v2 Invisible
 - reCAPTCHA v3
 - Cloudflare Turnstile
+- hCaptcha
   Additionally, we have included Honeypot anti spam protection. We have implemented the technique differently than any other spam protection plugin has done. We add the honeypot anti spam field from client side (JavaScript) after the form load completes which way the spam bots gets confused and cannot detect the honeypot field. This technique is very effective against spam bots. WP Armour is the only other plugin that has implemented this technique.
 
 == Installation ==
@@ -544,6 +545,27 @@ Yes, Bit Form has built-in spam protection better than any other Contact Form Bu
 6. Response table to view form entries
 
 == Changelog ==
+= 2.20.2 =
+*Release Date: 16 July, 2025*
+*Improvements:
+    1. Move existing field between Section,Repater and Steps.
+    2. Phone number field: added country list hide settings and similar country code validation
+
+= 2.20.1 =
+*Release Date: 08 July, 2025*
+*New:
+    1. Spacer Field: Added a new Spacer field to create visual gaps between form fields, improving form layout and appearance.
+    2. Smart Tag – ${_bf_format_datetime()}: Introduced a new smart tag to format date and time based on user-defined preferences, allowing better control over how date/time values are displayed.
+
+*Improvements:
+    1. Min/Max Date-Time Range: Added support for setting minimum and maximum ranges in Date, Time, Month, and Week fields to enhance validation and input control.
+    2. Conditional Logic Enhancements: Improved behavior of "Change" and "Click" logic by accurately targeting and comparing selected fields.
+
+*Fix:
+    1. Resolved missing "Logged In User" option in the ACF integration edit section.
+    2. Fixed an issue where entry owner/user was being overwritten during entry edits.
+    3. Resolved global validation message overwrite issue in default settings.
+
 = 2.20.0 =
 *Release Date: 30 June, 2025*
 *New:

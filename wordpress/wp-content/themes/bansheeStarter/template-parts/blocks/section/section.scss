@@ -15,6 +15,22 @@
     & > *{
         width:100%;
     }
+
+    &.block--subwayTile{
+        margin: 100px 0;
+       &:before {
+        content: '';
+        background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/checkered.svg");
+        width: 100%;
+        background-color: swatch('Black');
+        height: 100px;
+        display: inline-block;
+        position: absolute;
+        background-size: 50px;
+        top: -50px;
+    }
+
+    }
     
     .wp-block-columns:not(.glossary-entry){
         margin:0;

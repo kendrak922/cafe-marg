@@ -217,10 +217,10 @@ $btnSolidDefault: (
 );
 // Secondary Colors
 $btnSolidSecondary: (
-	'textColor': swatch('LightNeutral'),
+	'textColor': swatch('Neutral'),
 	'bgColor': swatch('Secondary'),
 	'borderColor': swatch('Secondary'),
-	'hoverTextColor': swatch('Primary'),
+	'hoverTextColor': swatch('LightNeutral'),
 	'hoverBgColor': swatch('SecondaryHover'),
 	'hoverBorderColor': swatch('SecondaryHover'),
 	'disabled': swatch('Gray'),

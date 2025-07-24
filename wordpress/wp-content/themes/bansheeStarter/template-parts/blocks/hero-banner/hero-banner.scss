@@ -7,7 +7,7 @@ section.block--hero-banner {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    // min-height: 80vh;
+    min-height: 90vh;
 
     @include create-mq($md-width) {
         padding-top: 140px;
@@ -31,27 +31,27 @@ section.block--hero-banner {
         &[data-content-align-x='right'] {
             justify-content: flex-end;
 
-            @include create-mq($md-width) {
-                flex-wrap: nowrap;
-                justify-content: space-between;
+            // @include create-mq($md-width) {
+            //     flex-wrap: nowrap;
+            //     justify-content: space-between;
 
-                .hero-banner__content {
-                    order: 1;
-                }
-            }
+            //     .hero-banner__content {
+            //         order: 1;
+            //     }
+            // }
         }
 
         &[data-content-align-x='left'] {
             justify-content: flex-start;
 
-            @include create-mq($md-width) {
-                flex-wrap: nowrap;
-                justify-content: space-between;
+            // @include create-mq($md-width) {
+            //     flex-wrap: nowrap;
+            //     justify-content: space-between;
 
-                .hero-banner__content {
-                    order: -1;
-                }
-            }
+            //     .hero-banner__content {
+            //         order: -1;
+            //     }
+            // }
         }
     }
 
@@ -68,12 +68,13 @@ section.block--hero-banner {
         max-width: 1000px;
         position: relative;
         bottom: -64px;
+        border-radius: 20px;
         margin-bottom: 80px;
         @include create-mq($sm-width) {
             bottom: -80px;
         }
         @include create-mq($md-width) {
-            padding: 48px 20px 48px 48px;
+            padding: 48px;
             bottom: -160px;
             right: auto;
         }
@@ -87,6 +88,9 @@ section.block--hero-banner {
             @include create-mq($md-width) {
                 right: 50px;
             }
+        }
+        h1,h2,h3,h4 {
+            margin:0;
         }
     }
 
