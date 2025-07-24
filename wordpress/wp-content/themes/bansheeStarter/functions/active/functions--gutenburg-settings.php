@@ -105,7 +105,7 @@ add_theme_support( 'editor-color-palette', array(
      array(
         'name'  => esc_attr__( 'brand: light-green', 'themeLangDomain' ),
         'slug'  => 'LightGreen',
-        'color' => '#9B904E',
+        'color' => '#D0EFB1',
     )   
 ) );
 

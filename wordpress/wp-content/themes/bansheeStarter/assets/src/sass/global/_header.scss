@@ -141,9 +141,14 @@
 }
 
     .has-hero-banner {
-       .wrapper > header {
+       .wrapper > header[aria-label="Global header navigation"] {
             position: absolute;
         }
+        .header--fixed {
+            background-color: swatch('Black');
+            opacity: .7;  
+        }
+
         .page__wrapper {
             padding-top: 0;
         }
@@ -152,11 +157,13 @@
 .scrolled {
     .header {
         background-color: swatch('Cream'); 
+        opacity: 1;
     }
     .u-darkMode {
         .header {
             &--fixed {
                 background-color: swatch('Black');
+                opacity: 1;
             }
         }
     }

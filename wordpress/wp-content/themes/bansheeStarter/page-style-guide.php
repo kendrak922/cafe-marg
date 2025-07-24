@@ -33,12 +33,6 @@ if (has_blocks($templateData['post']->post_content)) {
 		</div>
 	<?php endif; ?>
 
-  <section class="block">
-    <div class="container">
-      <h1>Banshee Studio Branding Guide</h1>
-    </div>
-  </section>
-
   <?php
     /**
      * GENERAL
@@ -120,7 +114,7 @@ if (has_blocks($templateData['post']->post_content)) {
       <div class="grid__col grid__col--12 grid__col-sm--6--spaced grid__col-md--4--spaced u-marginBottom8gu grid grid--column">
             <h2 class="u-textTertiary u-marginBottom8gu u-marginTop16gu u-textSizePlus8">Accent Font</h2>
             <p class="u-textSizePlus8 u-textTertiary">This is the font we use sparingly when we need some pizzaz </p>
-            <p class="u-textSizePlus2">As you can see it's not the most legible - so we may keep playing with this. Wanted a font that mimicked your logo style</p>
+            <p class="u-textSizePlus2">As you can see it's not the most legible (but looks soooo good in the header) - so we may keep playing with this. Wanted a font that mimicked your logo style</p>
 
           </div>
     <?php

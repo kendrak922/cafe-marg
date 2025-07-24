@@ -32,19 +32,6 @@
     position: relative;
     padding-top: 50px;
 
-    // &:before {
-    //     content: '';
-    //     background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/checkered.svg");
-    //     width: 100%;
-    //     background-color: swatch('Black');
-    //     height: 100px;
-    //     display: inline-block;
-    //     position: absolute;
-    //     background-size: 50px;
-    //     top: -50px;
-    // }
-
-
     //
     // * Logo
     //
@@ -131,7 +118,6 @@
         text-align: center;
 
         @include create-mq($md-width) {
-            max-width: 22rem;
             padding-bottom: 2.5rem;
             padding: unset;
             text-align: left;
@@ -148,15 +134,11 @@
         gap: 16px;
 
         @include create-mq($md-width) {
-            max-width: 500px;
             text-align: left;
             margin-right: auto;
             align-items: flex-end;
             flex-flow: row;
             gap: 45px;
-        }
-        @include create-mq($xl-width) {
-            max-width: 400px;
         }
     }
 

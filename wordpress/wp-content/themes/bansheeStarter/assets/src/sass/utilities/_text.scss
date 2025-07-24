@@ -106,7 +106,7 @@
  * Styles
  */
  body:not(.wp-admin) main,
- .wp-admin .is-root-container{
+ .wp-admin .is-root-container, footer{
   .u-textPrimary {
     font-family: $font-stack-primary;
   }

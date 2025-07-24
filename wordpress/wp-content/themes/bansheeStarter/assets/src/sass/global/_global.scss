@@ -33,7 +33,7 @@
 	overflow: hidden;
 }
 
-.u-darkMode header {
+.u-darkMode header[aria-label="Global header navigation"] {
 	background-color: swatch('Black');
 }
 
