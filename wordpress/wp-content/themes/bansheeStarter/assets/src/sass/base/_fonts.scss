@@ -90,7 +90,7 @@ body:not(.wp-admin) main,
     h1,
     .h1,
     .has-h-1-font-size,
-    h2,
+    h2:not(.tribe-events-single-section-title ),
     .h2,
     .has-h-2-font-size,
     h3,
@@ -117,7 +117,7 @@ body:not(.wp-admin) main,
         }
     }
 
-    h2,
+    h2:not(.tribe-events-single-section-title),
     .h2,
     .wp-block-heading.has-h-2-font-size,
     .wp-block-post-title.has-h-2-font-size{
