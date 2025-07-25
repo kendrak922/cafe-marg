@@ -332,15 +332,17 @@ $btnOutlineWhite: (
 		}
 	}
 
-	.u-darkMode & {
-		@include btnColors($btnOutlineWhite);
-		.icon {
-			@include icon.iconColor(icon.$iconDark);
-		}
-		&:hover {
+	.u-darkMode  {
+		&button {
+				@include btnColors($btnOutlineWhite);
 			.icon {
 				@include icon.iconColor(icon.$iconDark);
 			}
+			&:hover {
+				.icon {
+					@include icon.iconColor(icon.$iconDark);
+				}
+			}	
 		}
 	}
 
@@ -445,8 +447,8 @@ $btnArrowDark: (
 	}
 }
 .u-darkMode {
-	.btn--text,
-	.btn--arrow {
+	&.btn--text,
+	&.btn--arrow {
 		@include btnColors($btnArrowDark);
 		svg path{
 			stroke: swatch("LightNeutral") !important;
