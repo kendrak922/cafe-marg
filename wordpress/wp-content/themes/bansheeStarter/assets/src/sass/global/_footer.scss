@@ -14,6 +14,7 @@
 
     nav {
         @include font.smallNav();
+        justify-content: start;
     }
 
     a {
@@ -78,7 +79,7 @@
         a:not(.btn--primary) {
             color: swatch('Primary');
             &:hover {
-                color: swatch('LightGreen');
+                color: swatch('PrimaryHover');
             }
         }
 

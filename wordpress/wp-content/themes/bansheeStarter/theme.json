@@ -2,14 +2,14 @@
   "version": 2,
   "settings": {
     "color": {
-      "custom": false,
+      "custom": true,
       "customDuotone": false,
       "customGradient": false,
       "defaultGradients": false,
       "defaultPalette": false,
-      "background": false,
+      "background": true,
       "defaultDuotone": false,
-      "text": false
+      "text": true
     },
     "typography": {
       "dropCap": false,

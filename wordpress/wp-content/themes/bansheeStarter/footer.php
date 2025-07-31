@@ -19,7 +19,6 @@ $footerData = [
 ];
 
 $button = get_field('button', 'options');
-// $social_links = get_field('socials', 'options');
 $socials = get_field('socials', 'options');
 $footer_text = get_field("footer_text", 'option');
 $footer_email = get_field("email", 'option');
@@ -35,7 +34,7 @@ $footer_link = get_field("footer_link", 'option');
 <?php // Opened in header.php 
 ?>
 
-<footer id="footer" class="footer <?php echo $args && $args['hasSidebar']?'has-sidebar':'';?> ">
+<footer id="footer" class="footer">
     <?php /*****
            * FOOTER MAIN 
            ******/ ?>
@@ -44,9 +43,9 @@ $footer_link = get_field("footer_link", 'option');
             <div class="footer__logo">
                 <a href="<?php bloginfo('url'); ?>"  aria-label="Link to homepage">
                     <?php if (get_field('global_imagery', 'options')['footer_logo']) : $logo = get_field('global_imagery', 'options')['footer_logo']; ?>
-                            <img height="308px" width="550px" src="<?php echo $logo['url']; ?>" alt="Banshee Starter Logo">
+                            <img height="166px" width="500px" src="<?php echo $logo['url']; ?>" alt="Banshee Starter Logo">
                     <?php elseif (file_exists($themeGlobals['theme_rel'] . '/assets/dist/imgs/logo-footer.png')) : ?>
-                            <img height="308px" width="550px" src="<?php echo $themeGlobals['theme_url']; ?>/assets/dist/imgs/logo-footer.png" alt="Banshee Starter Logo" class="u-lg-block" />               
+                            <img height="166px" width="500px" src="<?php echo $themeGlobals['theme_url']; ?>/assets/dist/imgs/logo-footer.png" alt="Banshee Starter Logo" class="u-lg-block" />               
                     <?php else : ?>
                             <strong><?php echo bloginfo('title'); ?></strong>
                     <?php endif; ?>
@@ -57,7 +56,7 @@ $footer_link = get_field("footer_link", 'option');
                             <div class="footer__contact">
                                 <?php if($footer_text) : ?>
                                     <div class="footer__text">
-                                        <p class="text text-lg"><?php echo $footer_text;?></p>
+                                        <p class="text h4 u-textSecondary"><?php echo $footer_text;?></p>
                                     </div>
                                 <?php endif; ?>
                                 <?php if($footer_link) : ?>
@@ -70,7 +69,7 @@ $footer_link = get_field("footer_link", 'option');
                             <?php /* Footer Menu */ ?>
                             <?php if($socials) : ?>
                                         <div class="footer__social social">
-                                            <h3 class="h3">Follow us</h3>
+                                            <h3 class="h4 social__head">Follow us</h3>
                                             <nav class="menu--footer menu" aria-label="Social Media Menu">
                                                 <?php foreach($socials as $social) : ?>
                                                         <?php 

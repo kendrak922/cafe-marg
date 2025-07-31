@@ -32,8 +32,7 @@
                 "Pink": "Pink",
                 "Black": "Black",
                 "White": "White",
-                "Success": "Success",
-                "Error": "Error"
+                "Brown": "Brown"
             },
             "default_value": "",
             "return_format": "value",
@@ -526,12 +525,14 @@
                 "class": "",
                 "id": ""
             },
+            "relevanssi_exclude": 0,
             "choices": {
                 "default": "Default",
                 "narrow": "Narrow",
                 "ultra-narrow": "Ultra Narrow",
                 "wide": "Wide",
-                "ultra-wide": "Ultra Wide"
+                "ultra-wide": "Ultra Wide",
+                "full": "Full"
             },
             "default_value": "default",
             "return_format": "value",
@@ -733,5 +734,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752771213
+    "modified": 1753903620
 }

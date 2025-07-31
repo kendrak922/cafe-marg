@@ -8,14 +8,10 @@
 //////////////////
 /// * LAYOUT * ///
 //////////////////
-// Header: sm-88  md-88
 $headerHeight: (
   'sm': 4.5rem,
-  //72
-  'lg': 4.5rem,
-  //136
+  'lg': 6.5rem,
   'scroll': 4rem,
-  //72
 );
 $adminHeight: (
   'sm': 2.875rem,
@@ -91,7 +87,7 @@ $primary-hover: #8F6D50;
 // Basics
 $color-black: #1A1D18;
 $color-white:#F2F5EA;
-$color-neutral: #8F6D50;
+$color-neutral: #4A3D25;
 
 $palette: (
   'Primary': $color-primary,
@@ -107,7 +103,7 @@ $palette: (
   'Cream' : #E6DBD0,
   'Yellow' : #FCFDAF,
   // Style Guide
-  'Brown' : #8F6D50,
+  'Brown' : #4A3D25,
   'LightBlue' : #CFE4FF,
   'Red': #DB3A34,
   'Blue' : #1B5299,

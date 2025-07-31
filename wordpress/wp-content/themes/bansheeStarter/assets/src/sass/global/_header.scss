@@ -32,16 +32,16 @@
         height: auto;
 
         img {
-            height: 2.5rem;
+            height: 4.5rem;
             width: auto;
             object-fit: contain;
 
             @include create-mq($lg-width) {
-                height: 4.5rem;
+                height: 6.5rem;
                 transition: height ease-in-out $t-default;
 
                 body.scrolled & {
-                    height: 1.5rem;
+                    height: 2.5rem;
                 }
             }
         }
@@ -75,6 +75,7 @@
             .header-bar__wrapper {
                 height: map.get($headerHeight, 'sm');
                 @include create-mq($lg-width) {
+                    gap:32px;
                     height: map.get($headerHeight, 'lg');
                     transition: height ease-in-out $t-default;
 
@@ -129,6 +130,9 @@
 .darkModeLogo {
     display: none;
 }
+.lightModeLogo {
+    display: block;
+}
 
 .u-darkMode {
     .darkModeLogo {
@@ -144,20 +148,33 @@
        .wrapper > header[aria-label="Global header navigation"] {
             position: absolute;
         }
-        .header--fixed {
-            background-color: swatch('Black');
-            opacity: .7;  
-        }
 
         .page__wrapper {
             padding-top: 0;
         }
     }
 
+    .has-hero-banner__image {
+        .wrapper > header[aria-label="Global header navigation"] {
+            position: absolute;
+        }
+
+        .page__wrapper {
+            padding-top: 0;
+        }
+         .header--fixed {
+             background-color: swatch('Black');
+             opacity: .7;  
+         }
+     }
+ 
+
 .scrolled {
     .header {
-        background-color: swatch('Cream'); 
-        opacity: 1;
+        &--fixed {
+            background-color: swatch('Cream');
+            opacity: 1;
+        }
     }
     .u-darkMode {
         .header {

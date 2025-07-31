@@ -1131,9 +1131,19 @@ class Functions__Header {
     }
 
       /// change z-index when there is a hero banner
-      const homeHero = document.querySelector('.hero-banner');
+      const homeHeroImage = document.querySelector('.hero-banner');
+      const homeHero = document.querySelector('.hero-banner.bgMedia');
+      const pageHero = document.querySelector('.page-banner');
       const body = document.querySelector('body');
         if(homeHero){
+          body.classList.add('has-hero-banner');
+        }
+
+        if(homeHeroImage){
+          body.classList.add('has-hero-banner__image');
+        }
+
+        if(pageHero){
           body.classList.add('has-hero-banner');
         }
   

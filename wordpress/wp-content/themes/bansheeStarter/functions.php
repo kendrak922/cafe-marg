@@ -56,7 +56,9 @@ function theme_enqueue_assets()
     // Global Vars
     global $themeGlobals;
 
-    /********** DECLARE VARS **********/
+    /**********
+ * DECLARE VARS 
+**********/
     // Asset Paths
     $paths = [
         'styles_vendor' => '/assets/dist/css/' . $themeGlobals['namespace'] . 'vendor.min.css',
@@ -82,9 +84,13 @@ function theme_enqueue_assets()
         'scripts_blocks' => array('jquery'),
     ];
 
-    /********** ENQUEUE ASSETS **********/
+    /**********
+ * ENQUEUE ASSETS 
+**********/
 
-    /*** Vendor Styles ***/
+    /***
+ * Vendor Styles 
+***/
     // if file exists, register & enqueue
     if (file_exists($themeGlobals['theme_rel'] . $paths['styles_vendor'])) {
         // Update dependencies
@@ -95,7 +101,9 @@ function theme_enqueue_assets()
         wp_enqueue_style($handles['styles_vendor']);
     }
 
-    /*** Custom Global Styles ***/
+    /***
+ * Custom Global Styles 
+***/
     // if file exists, register & enqueue
     if (file_exists($themeGlobals['theme_rel'] . $paths['styles_custom'])) {
         // Enqueue Asset
@@ -103,12 +111,16 @@ function theme_enqueue_assets()
         wp_enqueue_style($handles['styles_custom']);
     }
 
-    /*** Custom Font Styles ***/
+    /***
+ * Custom Font Styles 
+***/
     wp_register_style('styles_fonts', "https://fonts.googleapis.com/css2?family=Baumans&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Parisienne&family=Petit+Formal+Script&family=Send+Flowers&display=swap");
 
     wp_enqueue_style('styles_fonts');
 
-    /*** Vendor Scripts ***/
+    /***
+ * Vendor Scripts 
+***/
     // if file exists, register & enqueue
     if (file_exists($themeGlobals['theme_rel'] . $paths['scripts_vendor'])) {
         // Update dependencies
@@ -119,49 +131,63 @@ function theme_enqueue_assets()
         wp_enqueue_script($handles['scripts_vendor']);
     }
 
-    /*** Custom Scripts ***/
+    /***
+ * Custom Scripts 
+***/
     // if file exists, register & enqueue
     if (file_exists($themeGlobals['theme_rel'] . $paths['scripts_custom'])) {
         // Enqueue Asset
         wp_register_script($handles['scripts_custom'], $themeGlobals['theme_url'] . $paths['scripts_custom'], $dependencies['scripts_custom'], filemtime($themeGlobals['theme_rel'] . $paths['scripts_custom']), true);
         wp_enqueue_script($handles['scripts_custom']);
         // Pass variables from PHP into JS - accessible from the "php_vars" JS object: console.log('php_vars: ', php_vars)
-        wp_localize_script($handles['scripts_custom'], 'php_vars', array(
+        wp_localize_script(
+            $handles['scripts_custom'], 'php_vars', array(
             'ajax_url' => $themeGlobals['ajax_url'],
             'rest_url' => $themeGlobals['rest_url'],
             'rest_nonce' => wp_create_nonce('wp_rest'),
-        ));
+            )
+        );
     }
 
-    /*** Custom Block Scripts ***/
+    /***
+ * Custom Block Scripts 
+***/
     // if file exists, register & enqueue
     if (file_exists($themeGlobals['theme_rel'] . $paths['scripts_blocks'])) {
         // Enqueue Asset
         wp_register_script($handles['scripts_blocks'], $themeGlobals['theme_url'] . $paths['scripts_blocks'], $dependencies['scripts_blocks'], filemtime($themeGlobals['theme_rel'] . $paths['scripts_blocks']), true);
         wp_enqueue_script($handles['scripts_blocks']);
         // Pass variables from PHP into JS - accessible from the "php_vars" JS object: console.log('php_vars: ', php_vars)
-        wp_localize_script($handles['scripts_blocks'], 'php_vars', array(
+        wp_localize_script(
+            $handles['scripts_blocks'], 'php_vars', array(
             'ajax_url' => $themeGlobals['ajax_url'],
             'rest_url' => $themeGlobals['rest_url'],
             'rest_nonce' => wp_create_nonce('wp_rest'),
-        ));
+            )
+        );
     }
 }
 add_action('wp_enqueue_scripts', 'theme_enqueue_assets');
 
 
-/***** ADMIN ASSETS *****/
+/*****
+ * ADMIN ASSETS 
+ *****/
 function admin_theme_assets()
 {
     // Global Variables
     global $themeGlobals;
 
-    /***** Gutenberg Block Editor *****/
+    /*****
+ * Gutenberg Block Editor 
+*****/
     if (is_admin()) {
         // Custom Block Styles and Scripts
         add_action('admin_enqueue_scripts', 'theme_enqueue_assets');
 
-        /********** DECLARE VARS **********/
+        /**********
+ * DECLARE VARS 
+**********/
         // Asset Paths
         $paths = [
             'styles_admin' => '/assets/dist/css/admin-styles.css',
@@ -175,9 +201,13 @@ function admin_theme_assets()
             'styles_admin' => null,
         ];
 
-        /********** ENQUEUE ASSETS **********/
+        /**********
+ * ENQUEUE ASSETS 
+**********/
 
-        /*** Gutenberg Block Editor Admin Styles ***/
+        /***
+ * Gutenberg Block Editor Admin Styles 
+***/
         // if file exists, register & enqueue
         if (file_exists($themeGlobals['theme_rel'] . $paths['styles_admin'])) {
             // Enqueue Asset
@@ -195,7 +225,7 @@ add_action('enqueue_block_editor_assets', 'admin_theme_assets');
 /** 
  * PHP CONSOLE LOG 
  * 
- * @param $data - PHP variable to log to JS console
+ * @param $data  - PHP variable to log to JS console
  * @param $label - String label to prefix the JS console log
  */
 function debug_to_console($data, $label = 'PHP Debug to Console')
@@ -225,6 +255,7 @@ function theme_register_menus()
     register_nav_menus(
         array(
             'main-menu' => __('Main Menu'),
+            'main-menu--two' => __('Main Menu Two'), 
             // 'utility-menu' => __('Utility Menu'),
             'footer-menu' => __('Footer Menu'),
             // 'footer-menu2' => __('Footer Menu 2'),
@@ -240,7 +271,8 @@ add_action('init', 'theme_register_menus');
 function theme_widgets_register()
 {
 
-    register_sidebar(array(
+    register_sidebar(
+        array(
         'name'          => 'Sidebar One',
         'id'            => 'sidebar_one',
         'before_widget' => '<div class="widget">',
@@ -248,7 +280,8 @@ function theme_widgets_register()
         'before_title'  => '<h2>',
         'after_title'   => '</h2>',
         'description'   => ''
-    ));
+        )
+    );
 }
 add_action('widgets_init', 'theme_widgets_register');
 
@@ -259,8 +292,8 @@ add_action('widgets_init', 'theme_widgets_register');
 function theme_add_support()
 {
     // Excerpts 
-    add_theme_support('excerpt');	
-    add_post_type_support( 'page', 'excerpt' );
+    add_theme_support('excerpt');    
+    add_post_type_support('page', 'excerpt');
     // Featured Images
     add_theme_support('post-thumbnails');
 }
@@ -271,8 +304,9 @@ function theme_remove_tags()
 {
     global $wp_taxonomies;
     $tax = 'post_tag';
-    if (taxonomy_exists($tax))
+    if (taxonomy_exists($tax)) {
         unset($wp_taxonomies[$tax]);
+    }
 }
 // add_action( 'init', 'theme_remove_tags' ); 
 
@@ -282,7 +316,8 @@ function theme_remove_tags()
 /*************************************************************/
 // add options page
 if (function_exists('acf_add_options_page')) {
-    acf_add_options_page(array(
+    acf_add_options_page(
+        array(
         'page_title'    => 'Theme General Options',
         'menu_title'    => 'Theme Options',
         'menu_slug'     => 'theme-general-settings',
@@ -290,7 +325,8 @@ if (function_exists('acf_add_options_page')) {
         'redirect'      => false,
         'icon_url' => 'dashicons-admin-home',
         'position' => 2
-    ));
+        )
+    );
 }
 
 
@@ -304,7 +340,7 @@ if (function_exists('acf_add_options_page')) {
 $elements = scandir(__DIR__ . '/functions/active');
 foreach ($elements as $item) {
     if ($item[0] != '.') {
-        include(__DIR__ . '/functions/active/' . $item);
+        include __DIR__ . '/functions/active/' . $item;
     }
 }
 
@@ -342,7 +378,7 @@ function register_acf_block_types()
     $blocks = scandir(__DIR__ . '/template-parts/blocks/__register');
     foreach ($blocks as $block) {
         if ($block[0] != '.') {
-            include(__DIR__ . '/template-parts/blocks/__register/' . $block);
+            include __DIR__ . '/template-parts/blocks/__register/' . $block;
         }
     }
 }
@@ -379,26 +415,26 @@ function my_allowed_block_types($allowed_block_types_all, $post)
     $post_type = get_post_type();
     switch ($post_type):
 
-        case 'post':
-            // Post Type specific blocks - example
-            // default to built in wysiwyg - allow ACF blocks too
-            $allowed[] = 'core/freeform';
-            foreach (acf_get_block_types() as $key => $block) {
-               $allowed[] = $block['name'];
-            }
-            break;
+    case 'post':
+        // Post Type specific blocks - example
+        // default to built in wysiwyg - allow ACF blocks too
+        $allowed[] = 'core/freeform';
+        foreach (acf_get_block_types() as $key => $block) {
+            $allowed[] = $block['name'];
+        }
+        break;
 
         // Default blocks allowed
-        default:
-            foreach (acf_get_block_types() as $key => $block) {
-                $allowed[] = $block['name'];
-            }
-            break;
+    default:
+        foreach (acf_get_block_types() as $key => $block) {
+            $allowed[] = $block['name'];
+        }
+        break;
     endswitch;
 
     return $allowed;
 }
-// add_filter('allowed_block_types_all', 'my_allowed_block_types', 10, 2);
+add_filter('allowed_block_types_all', 'my_allowed_block_types', 10, 2);
 
 
 /*************************************************************
@@ -435,42 +471,7 @@ add_action('pre_get_posts', 'my_pre_get_posts');
 
 
 add_filter('frm_scroll_offset', 'frm_scroll_offset');
-function frm_scroll_offset(){
-  return 170; 
+function frm_scroll_offset()
+{
+    return 170; 
 }
-
-
-/**
- * Move the field description above the form field.
- *
- * @link   https://wpforms.com/developers/how-to-position-the-field-description-above-the-form-field/
- */
-
- function wpf_dev_field_properties( $properties, $field, $form_data ) {
-    
-    // Only process this snippet on form ID 12
-    if ( absint( $form_data[ 'id' ] ) !== 129 ) {
-        return $properties;
-    } 
-    
-    {
-        // Position the field description above the form field
-        $properties[ 'description' ][ 'position' ] = 'before';
-    }
-
-    return $properties;
-}
-add_filter( 'wpforms_field_properties', 'wpf_dev_field_properties', 10, 3 );
-
-
-// $about_page = array(
-//     'post_title'    => 'about',
-//     'post_content'  => 'This is my post.',
-//     'post_status'   => 'publish',
-//     'post_author'   => 1,
-//     'post_category' => array(1),
-//     'post_type'     => 'page'
-// );
-
-// // Insert the post into the database
-// wp_insert_post( $about_page );
