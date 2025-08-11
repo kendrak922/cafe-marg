@@ -20,4 +20,35 @@
         margin:0;
         padding:0;
     }
+
+    &.block--subwayTile {
+        margin: 100px 0;
+        &-top:before {
+            content: '';
+        }
+        &-bottom:after {
+            content: '';
+        }
+
+        &:before, &:after {
+            background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/checkered.svg");
+            width: 100%;
+            background-color: black;
+            background-repeat: repeat;
+            height: 100px;
+            display: inline-block;
+            position: absolute;
+            background-size: contain;
+        }
+
+        &:before {
+            top: -100px;
+        }
+
+        &:after {
+            bottom: -100px;
+            transform: scale(-1, -1);
+        }
+    }
+
 } // close: .block--section

@@ -409,7 +409,9 @@ function my_allowed_block_types($allowed_block_types_all, $post)
         'core/post-title',
         'core/html',
         'yoast-seo/breadcrumbs',
-        'visual-portfolio/block' 
+        'visual-portfolio/block' ,
+        'tribe/events-list',
+        'tribe/qr-code'
     ];
 
     $post_type = get_post_type();

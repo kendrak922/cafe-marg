@@ -17,7 +17,8 @@ $blocks_template = array(
 
 $blockData = array(
     'vertical_padding' => get_field('vertical_padding') ?? 'default',
-    'section_edge' => get_field('section_edge') ?? ''
+    'section_edge_top' => get_field('section_edge_top') ?? '',
+    'section_edge_bottom' => get_field('section_edge_bottom') ?? '',
 );
 
 /***** ADMIN LABEL *****/
@@ -54,9 +55,15 @@ if ($blockData['vertical_padding']) {
     $classes[] = 'block--padding-'.$blockData['vertical_padding'];
 }
 
-if ($blockData['section_edge']) {
-    $section_edge = 'block--subwayTile';
-    $classes[] = $section_edge;
+if ($blockData['section_edge_top']) {
+    $section_edge_top = 'block--subwayTile-top';
+    $classes[] = $section_edge_top;
+    $classes[] = 'block--subwayTile';
+}
+if ($blockData['section_edge_bottom']) {
+    $section_edge_bottom = 'block--subwayTile-bottom';
+    $classes[] = $section_edge_bottom;
+    $classes[] = 'block--subwayTile';
 }
 
 ?>
