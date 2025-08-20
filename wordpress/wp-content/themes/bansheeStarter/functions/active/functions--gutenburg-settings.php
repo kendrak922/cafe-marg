@@ -103,10 +103,15 @@ add_theme_support(
         'slug'  => 'Neutral',
         'color' => '#4A3D25',
      ),
+    //  array(
+    //     'name'  => esc_attr__('brand: pink', 'themeLangDomain'),
+    //     'slug'  => 'Pink',
+    //     'color' => '#F75590',
+    //  ),
      array(
-        'name'  => esc_attr__('brand: pink', 'themeLangDomain'),
-        'slug'  => 'Pink',
-        'color' => '#F75590',
+        'name'  => esc_attr__('brand: gold', 'themeLangDomain'),
+        'slug'  => 'Gold',
+        'color' => '#A37C40',
      ),
      array(
         'name'  => esc_attr__('brand: green', 'themeLangDomain'),

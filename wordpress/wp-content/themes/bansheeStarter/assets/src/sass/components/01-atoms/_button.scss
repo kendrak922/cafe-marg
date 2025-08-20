@@ -217,7 +217,7 @@ $btnSolidDefault: (
 );
 // Secondary Colors
 $btnSolidSecondary: (
-	'textColor': swatch('Neutral'),
+	'textColor': swatch('LightNeutral'),
 	'bgColor': swatch('Secondary'),
 	'borderColor': swatch('Secondary'),
 	'hoverTextColor': swatch('LightNeutral'),
@@ -302,8 +302,8 @@ $btnOutlineWhite: (
 	'hoverBorderColor': swatch('LightNeutral'),
 	'disabled': swatch('Gray'),
 	'disabledTextColor': swatch('Black'),
-	'activeBgColor': swatch('Pink'),
-	'activeBorderColor': swatch('Pink'),
+	'activeBgColor': swatch('Black'),
+	'activeBorderColor': swatch('Black'),
 );
 
 .wp-block-button.is-style-outline .wp-block-button__link,
@@ -373,10 +373,10 @@ $btnArrow: (
 	'disabledTextColor': swatch('Gray'),
 );
 $btnArrowDark: (
-	'textColor': swatch('LightNeutral'),
+	'textColor': swatch('Neutral'),
 	'bgColor': transparent,
 	'borderColor': transparent,
-	'hoverTextColor': swatch('Pink'),
+	'hoverTextColor': swatch('Gray'),
 	'hoverBgColor': transparent,
 	'hoverBorderColor': transparent,
 	'disabled': swatch('Gray'),

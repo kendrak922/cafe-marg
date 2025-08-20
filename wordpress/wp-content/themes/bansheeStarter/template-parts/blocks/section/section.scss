@@ -33,7 +33,7 @@
         &:before, &:after {
             background-image: url("/wp-content/themes/bansheeStarter/assets/dist/imgs/checkered.svg");
             width: 100%;
-            background-color: black;
+            background-color: swatch('Black');
             background-repeat: repeat;
             height: 100px;
             display: inline-block;

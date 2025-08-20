@@ -80,12 +80,12 @@ $map-width-props: (
 /// * COLORS * ///
 //////////////////
 
-$color-primary:#4A3D25;
-$color-secondary: #CFE4FF;
+$color-primary: #434341;;
+$color-secondary: #4A3D25;;
 $color-tertiary: #3C896D;
 $primary-hover: #8F6D50;
 // Basics
-$color-black: #1A1D18;
+$color-black:#434341;
 $color-white:#F2F5EA;
 $color-neutral: #4A3D25;
 
@@ -94,23 +94,24 @@ $palette: (
   'PrimaryHover': #8F6D50,
   'PrimaryActive':#8F6D50,
   'Secondary': $color-secondary,
-  'SecondaryHover': #3F84DE,
-  'SecondaryActive': #3F84DE,
+  'SecondaryHover': #8F6D50,
+  'SecondaryActive': #8F6D50,
   'Tertiary': $color-tertiary,
   // Text color
   'Neutral': $color-primary,
-  'LightNeutral' : #F2F5EA,
-  'Cream' : #E6DBD0,
+  'LightNeutral' : #E6DFD4,
+  'Cream' : #E6DFD4,
   'Yellow' : #FCFDAF,
   // Style Guide
   'Brown' : #4A3D25,
   'LightBlue' : #CFE4FF,
   'Red': #DB3A34,
-  'Blue' : #1B5299,
-  'Pink': #F75590,
+  'Blue' : #748CAB,
+  // 'Pink': #F75590,
   'Green': #3C896D,
   'LightGreen': #D0EFB1,
   'Gray' : #8F9191,
+  'Gold' : #8F6D50,
   'Black': $color-black,
   'White': $color-white,
   'Success':#3C896D,

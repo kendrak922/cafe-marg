@@ -72,7 +72,7 @@ if (has_blocks($templateData['post']->post_content)) {
         'LightGreen',
         'Gray',
         'Red',
-        'Pink',
+        'Gold',
         'Black',
         'White',
         'Success',

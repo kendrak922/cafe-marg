@@ -67,20 +67,18 @@ section.block--hero-banner {
     &__content {
         max-width: 1000px;
         position: relative;
-        bottom: -64px;
-        border-radius: 20px;
-        margin-bottom: 80px;
+        bottom: -60vh;
+        z-index: 1;
         padding: 12px;
         @include create-mq($sm-width) {
-            bottom: -80px;
+            bottom: -60vh;
         }
         @include create-mq($md-width) {
             padding: 48px;
-            bottom: -160px;
             right: auto;
         }
         @include create-mq($lg-width) {
-            bottom: auto;
+
         }
         img {
             right: 0;
