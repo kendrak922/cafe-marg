@@ -82,11 +82,11 @@ $map-width-props: (
 
 $color-primary: #434341;;
 $color-secondary: #4A3D25;;
-$color-tertiary: #3C896D;
+$color-tertiary: #748CAB;
 $primary-hover: #8F6D50;
 // Basics
 $color-black:#434341;
-$color-white:#F2F5EA;
+$color-white:#E6DFD4;
 $color-neutral: #4A3D25;
 
 $palette: (
@@ -98,7 +98,7 @@ $palette: (
   'SecondaryActive': #8F6D50,
   'Tertiary': $color-tertiary,
   // Text color
-  'Neutral': $color-primary,
+  'Neutral': $color-neutral,
   'LightNeutral' : #E6DFD4,
   'Cream' : #E6DFD4,
   'Yellow' : #FCFDAF,
@@ -117,7 +117,7 @@ $palette: (
   'Success':#3C896D,
   'Error': #DB3A34,
 );
-// :root {
+:root {
 //   --tec-color-accent-primary: #{$color-primary};
 //   --tec-color-background : #{$color-secondary};
 //   --tec-color-text-secondary :#{$color-white};
@@ -127,9 +127,9 @@ $palette: (
 //   --tec-color-accent-primary-active: #{$primary-hover};
 //   --tec-color-button-primary-active: #{$primary-hover};
 //   --tec-color-text-event-title: #{$color-primary};
-//   --tec-color-text-primary: #{$color-primary};
+  --tec-color-text-primary: #{$color-neutral};
 //   --tec-color-background-events-bar :  #{$color-white};
-// }
+}
 
 
 

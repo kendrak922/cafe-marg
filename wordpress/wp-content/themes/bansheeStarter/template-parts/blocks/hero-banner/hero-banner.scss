@@ -71,7 +71,7 @@ section.block--hero-banner {
         z-index: 1;
         padding: 12px;
         @include create-mq($sm-width) {
-            bottom: -60vh;
+            bottom: -55vh;
         }
         @include create-mq($md-width) {
             padding: 48px;
