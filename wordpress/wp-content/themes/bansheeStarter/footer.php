@@ -22,6 +22,7 @@ $button = get_field('button', 'options');
 $socials = get_field('socials', 'options');
 $footer_text = get_field("footer_text", 'option');
 $footer_email = get_field("email", 'option');
+$footer_phone = get_field("phone", 'option');
 $footer_link = get_field("footer_link", 'option');
 
 
@@ -40,36 +41,27 @@ $footer_link = get_field("footer_link", 'option');
            ******/ ?>
     <section class="footer__main">
         <div class="container container--ultra-wide">
-            <div class="footer__logo">
-                <a href="<?php bloginfo('url'); ?>"  aria-label="Link to homepage">
-                    <?php if (get_field('global_imagery', 'options')['footer_logo']) : $logo = get_field('global_imagery', 'options')['footer_logo']; ?>
-                            <img height="166px" width="500px" src="<?php echo $logo['url']; ?>" alt="Banshee Starter Logo">
-                    <?php elseif (file_exists($themeGlobals['theme_rel'] . '/assets/dist/imgs/logo-footer.png')) : ?>
-                            <img height="166px" width="500px" src="<?php echo $themeGlobals['theme_url']; ?>/assets/dist/imgs/logo-footer.png" alt="Banshee Starter Logo" class="u-lg-block" />               
-                    <?php else : ?>
-                            <strong><?php echo bloginfo('title'); ?></strong>
-                    <?php endif; ?>
-                </a>
-            </div>
-            <div class="footer__content">
+        <div class="footer__content">
+            <!-- <?php if($footer_text) : ?>
+                                    <div class="footer__text">
+                                        <p class="u-textTertiary text-xxl"><?php echo $footer_text; ?></p>
+                                    </div>
+            <?php endif; ?> -->
                         <?php if($footer_email) : ?>
                             <div class="footer__contact">
-                                <?php if($footer_text) : ?>
-                                    <div class="footer__text">
-                                        <p class="text h4 u-textSecondary"><?php echo $footer_text;?></p>
+                            <h3 class="h4 contact__head">Contact</h3>
+                                    <div class="footer__email">
+                                        <a  class="text-xs" href="mailto:<?php echo $footer_email?>" target="_blank"><?php echo $footer_email; ?></a>
                                     </div>
-                                <?php endif; ?>
-                                <?php if($footer_link) : ?>
-                                    <div class="footer__button">
-                                        <a class="btn btn--primary btn--medium" href="<?php echo $footer_link?>" target="_blank">Sign up on substack</a>
+                                    <div class="footer__number">
+                                        <a class="text-xs" href="<?php echo $footer_phone; ?>" target="_blank"><?php echo $footer_phone; ?></a>
                                     </div>
-                                <?php endif; ?>
                             </div>
                         <?php endif; ?>
                             <?php /* Footer Menu */ ?>
                             <?php if($socials) : ?>
                                         <div class="footer__social social">
-                                            <h3 class="h4 social__head">Follow us</h3>
+                                            <h3 class="h4 social__head">Follow</h3>
                                             <nav class="menu--footer menu" aria-label="Social Media Menu">
                                                 <?php foreach($socials as $social) : ?>
                                                         <?php 
@@ -85,6 +77,17 @@ $footer_link = get_field("footer_link", 'option');
                                         </div>
                             <?php endif; ?>
                 </div>
+            <div class="footer__logo">
+                <a href="<?php bloginfo('url'); ?>"  aria-label="Link to homepage">
+                    <?php if (get_field('global_imagery', 'options')['footer_logo']) : $logo = get_field('global_imagery', 'options')['footer_logo']; ?>
+                            <img height="166px" width="500px" src="<?php echo $logo['url']; ?>" alt="Banshee Starter Logo">
+                    <?php elseif (file_exists($themeGlobals['theme_rel'] . '/assets/dist/imgs/logo-footer.png')) : ?>
+                            <img height="166px" width="500px" src="<?php echo $themeGlobals['theme_url']; ?>/assets/dist/imgs/logo-footer.png" alt="Banshee Starter Logo" class="u-lg-block" />               
+                    <?php else : ?>
+                            <strong><?php echo bloginfo('title'); ?></strong>
+                    <?php endif; ?>
+                </a>
+            </div>
                 <div class="footer__bottom">
                 <nav class="menu-wrapper__content"  aria-label="Site Navigation" >
                                         <?php /*****

@@ -126,8 +126,10 @@
                 "class": "",
                 "id": ""
             },
+            "relevanssi_exclude": 0,
             "choices": {
                 "left": "Left",
+                "center": "Center",
                 "right": "Right"
             },
             "default_value": "left",
@@ -137,7 +139,9 @@
             "allow_in_bindings": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67f8197431299",
@@ -203,5 +207,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746027994
+    "modified": 1756145669
 }

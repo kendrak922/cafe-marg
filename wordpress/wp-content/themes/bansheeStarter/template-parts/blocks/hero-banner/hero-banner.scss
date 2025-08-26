@@ -40,6 +40,18 @@ section.block--hero-banner {
             //     }
             // }
         }
+        &[data-content-align-x='center'] {
+            justify-content: center;
+
+            // @include create-mq($md-width) {
+            //     flex-wrap: nowrap;
+            //     justify-content: space-between;
+
+            //     .hero-banner__content {
+            //         order: 1;
+            //     }
+            // }
+        }
 
         &[data-content-align-x='left'] {
             justify-content: flex-start;
@@ -67,12 +79,8 @@ section.block--hero-banner {
     &__content {
         max-width: 1000px;
         position: relative;
-        bottom: -60vh;
         z-index: 1;
         padding: 12px;
-        @include create-mq($sm-width) {
-            bottom: -55vh;
-        }
         @include create-mq($md-width) {
             padding: 48px;
             right: auto;
