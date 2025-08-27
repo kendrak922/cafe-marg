@@ -67,12 +67,12 @@ add_theme_support(
     array(
         'name'  => esc_attr__('white', 'themeLangDomain'),
         'slug'  => 'White',
-        'color' => '#F2F5EA',
+        'color' => '#FFFFFF',
      ),
      array(
         'name'  => esc_attr__('cream', 'themeLangDomain'),
         'slug'  => 'Cream',
-        'color' => '#E6DBD0',
+        'color' => '#E6DFD4',
      ),
      array(
         'name'  => esc_attr__('black', 'themeLangDomain'),

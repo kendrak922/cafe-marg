@@ -40,7 +40,18 @@ $footer_link = get_field("footer_link", 'option');
            * FOOTER MAIN 
            ******/ ?>
     <section class="footer__main">
-        <div class="container container--ultra-wide">
+        <div class="container container--wide">
+        <div class="footer__logo">
+                <a href="<?php bloginfo('url'); ?>"  aria-label="Link to homepage">
+                    <?php if (get_field('global_imagery', 'options')['footer_logo']) : $logo = get_field('global_imagery', 'options')['footer_logo']; ?>
+                            <img height="166px" width="500px" src="<?php echo $logo['url']; ?>" alt="Banshee Starter Logo">
+                    <?php elseif (file_exists($themeGlobals['theme_rel'] . '/assets/dist/imgs/logo-footer.png')) : ?>
+                            <img height="166px" width="500px" src="<?php echo $themeGlobals['theme_url']; ?>/assets/dist/imgs/logo-footer.png" alt="Banshee Starter Logo" class="u-lg-block" />               
+                    <?php else : ?>
+                            <strong><?php echo bloginfo('title'); ?></strong>
+                    <?php endif; ?>
+                </a>
+            </div>
         <div class="footer__content">
                                 <div>
                                     <h3 class="h4 hours__head">Hours</h3>
@@ -54,7 +65,7 @@ $footer_link = get_field("footer_link", 'option');
                                         $phone_link = $footer_phone['url'];
                                         $phone_text = $footer_phone['title'];  
                                         ?>
-                                        <div class="footer__number">
+                                        <div>
                                             <a  class="text-xs" href="mailto:<?php echo $footer_email?>" target="_blank"><?php echo $footer_email; ?></a>
                                             <a class="text-xs" href="<?php echo $phone_link; ?>"><?php echo $phone_text; ?></a>
                                         </div>
@@ -81,17 +92,13 @@ $footer_link = get_field("footer_link", 'option');
                                         </div>
                             <?php endif; ?>
                 </div>
-            <div class="footer__logo">
-                <a href="<?php bloginfo('url'); ?>"  aria-label="Link to homepage">
-                    <?php if (get_field('global_imagery', 'options')['footer_logo']) : $logo = get_field('global_imagery', 'options')['footer_logo']; ?>
-                            <img height="166px" width="500px" src="<?php echo $logo['url']; ?>" alt="Banshee Starter Logo">
-                    <?php elseif (file_exists($themeGlobals['theme_rel'] . '/assets/dist/imgs/logo-footer.png')) : ?>
-                            <img height="166px" width="500px" src="<?php echo $themeGlobals['theme_url']; ?>/assets/dist/imgs/logo-footer.png" alt="Banshee Starter Logo" class="u-lg-block" />               
-                    <?php else : ?>
-                            <strong><?php echo bloginfo('title'); ?></strong>
-                    <?php endif; ?>
-                </a>
-            </div>
+                <div class="footer__location">
+                        <h3 class="h4">Café Marguerite</h3>
+                        <p class="text-xs">300 13th Avenue NE</p>
+                        <p class="text-xs">Minneapolis, MN 55413</p>
+
+                        <a class="text-xs" href="https://www.google.com/maps/place/La+Boulangerie+Marguerite/@45.0006979,-93.2670205,17z/data=!4m6!3m5!1s0x52b333dedcc3484f:0xbf2184dcae27d5ba!8m2!3d45.0006941!4d-93.2644402!16s%2Fg%2F11kpl9ywzg?entry=tts&shorturl=1" target="_blank" >Google Maps</a>
+                </div>
                 <div class="footer__bottom">
                 <nav class="menu-wrapper__content"  aria-label="Site Navigation" >
                                         <?php /*****

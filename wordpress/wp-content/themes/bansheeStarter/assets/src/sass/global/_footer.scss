@@ -44,7 +44,7 @@
         margin: 0 auto;
         grid-row: 1;
         @include create-mq($md-width) {
-            grid-column: 2;
+            grid-column: 1;
             grid-row: 1;
             margin-right: auto;
             max-width: 500px;
@@ -63,7 +63,7 @@
         grid-template-columns: auto;
         grid-column-gap: 20px;
         @include create-mq($lg-width) {
-            grid-template-columns: auto 500px 500px auto;
+            grid-template-columns: 2fr 1fr 1fr;
             grid-column-gap: 60px; 
         }
     }
