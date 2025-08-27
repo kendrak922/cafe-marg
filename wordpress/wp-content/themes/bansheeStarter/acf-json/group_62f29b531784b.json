@@ -29,7 +29,7 @@
             "label": "Phone",
             "name": "phone",
             "aria-label": "",
-            "type": "text",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -39,12 +39,8 @@
                 "id": ""
             },
             "relevanssi_exclude": 0,
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "return_format": "array",
+            "allow_in_bindings": 0
         },
         {
             "key": "field_67abc8b3268b4",
@@ -437,5 +433,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1756220844
+    "modified": 1756303708
 }

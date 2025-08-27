@@ -42,38 +42,42 @@ $footer_link = get_field("footer_link", 'option');
     <section class="footer__main">
         <div class="container container--ultra-wide">
         <div class="footer__content">
-            <!-- <?php if($footer_text) : ?>
-                                    <div class="footer__text">
-                                        <p class="u-textTertiary text-xxl"><?php echo $footer_text; ?></p>
-                                    </div>
-            <?php endif; ?> -->
+                                <div>
+                                    <h3 class="h4 hours__head">Hours</h3>
+                                        <p class="text-xs" >Monday – Sunday</p>
+                                        <p class="text-xs" >7am – 4pm</p>
+                                </div>
                         <?php if($footer_email) : ?>
                             <div class="footer__contact">
-                            <h3 class="h4 contact__head">Contact</h3>
-                                    <div class="footer__email">
-                                        <a  class="text-xs" href="mailto:<?php echo $footer_email?>" target="_blank"><?php echo $footer_email; ?></a>
-                                    </div>
-                                    <div class="footer__number">
-                                        <a class="text-xs" href="<?php echo $footer_phone; ?>" target="_blank"><?php echo $footer_phone; ?></a>
-                                    </div>
+                                    <h3 class="h4 contact__head">Contact</h3>
+                                    <?php if($footer_phone) : 
+                                        $phone_link = $footer_phone['url'];
+                                        $phone_text = $footer_phone['title'];  
+                                        ?>
+                                        <div class="footer__number">
+                                            <a  class="text-xs" href="mailto:<?php echo $footer_email?>" target="_blank"><?php echo $footer_email; ?></a>
+                                            <a class="text-xs" href="<?php echo $phone_link; ?>"><?php echo $phone_text; ?></a>
+                                        </div>
+                                    <?php endif; ?>
                             </div>
                         <?php endif; ?>
                             <?php /* Footer Menu */ ?>
                             <?php if($socials) : ?>
                                         <div class="footer__social social">
                                             <h3 class="h4 social__head">Follow</h3>
-                                            <nav class="menu--footer menu" aria-label="Social Media Menu">
+                                            <div  aria-label="Social Media Menu">
                                                 <?php foreach($socials as $social) : ?>
                                                         <?php 
                                                             $link = $social['social_link'];
                                                             $title = $social['social_title'];
+                                                            $icon = $social['social_icon']['url'];
                                                         
                                                         ?>
                                                         <a href="<?php echo $link; ?>" target="_blank">
-                                                            <?php echo $title; ?>
+                                                            <img src="<?php echo $icon; ?>" height="40px" width="40px" />
                                                         </a>
                                                 <?php endforeach;?>
-                                            </nav>
+                                            </div>
                                         </div>
                             <?php endif; ?>
                 </div>

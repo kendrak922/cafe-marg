@@ -12,9 +12,13 @@
         line-height: 1;
     }
 
-    nav {
-        @include font.smallNav();
-        justify-content: start;
+    div {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        @include create-mq($md-width) {
+            justify-content: flex-start;
+        }
     }
 
     a {
@@ -91,22 +95,18 @@
         }
     }
 
-    &__email {
-        @include create-mq($md-width) {
-        margin-right: 32px;
-        }
-    }
-
     &__content {
         position: relative;
         display: grid;
         grid-row-gap: 32px;
         grid-column-gap: 0;
         margin-top: 40px;
+        text-align: center;
 
         @include create-mq($md-width) {
             grid-column: 3;
             grid-row-gap: 20px;
+            text-align: left;
             justify-content: flex-start;
             align-items: center;
             margin: 0;
@@ -124,11 +124,6 @@
             margin-bottom: 0;
         }
 
-        div {
-            @include create-mq($md-width) {
-                display: inline;
-            }
-        }
     }
 
     &__contact {
@@ -139,6 +134,14 @@
             padding-bottom: 2.5rem;
             padding: unset;
             text-align: left;
+        }
+
+        a:first-child {
+            display: block;
+            @include create-mq($md-width) {
+                display: inline;
+                margin-right: 32px;
+            }
         }
     }
 
@@ -168,16 +171,17 @@
         justify-content: space-between;
         align-items: center;
         flex-flow: column;
+        padding: 20px;
+        border-top: 2px solid swatch('Primary');
         @include create-mq($md-width) {
             display: flex;
-            margin-top: 100px;
             flex-flow: row;
             justify-content: space-between;
             align-items: end;
             grid-row-start: 2;
             grid-column-start: 1;
             grid-column-end: 5;
-            padding: 0 60px 20px;
+            padding: 20px 60px 20px;
         }
 
         .menu-wrapper__content {
