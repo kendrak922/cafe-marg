@@ -5,16 +5,16 @@
 ******************************/
 .menu {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 50px;
+    justify-content: space-between;
     &__section {
-        flex-basis: 46%;
+        flex-basis: 100%;
         gap: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         @include create-mq($md-width) {
-            flex-basis: 100%;
+            flex-basis: 46%;
         }
     }
 
@@ -39,6 +39,6 @@
 
 @include create-mq($md-width) {
     .menu {
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
     }
 }
