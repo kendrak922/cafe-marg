@@ -8,14 +8,17 @@
     flex-wrap: wrap;
     gap: 50px;
     &__section {
-        flex-basis: 50%;
+        flex-basis: 46%;
         gap: 20px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
+        @include create-mq($md-width) {
+            flex-basis: 100%;
+        }
     }
 
     &__item {
-        flex-basis: 100%;
         &-title {
             display: flex;
             align-items: center;
