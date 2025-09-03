@@ -1,0 +1,41 @@
+@use '../../../assets/src/sass/abstracts' as *;
+
+/******************************
+    BLOCK: Content Stacks
+******************************/
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    &__section {
+        flex-basis: 50%;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        flex-basis: 100%;
+        &-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+    
+            h4 {
+                display: inline-block;
+                margin-bottom: 0;
+                margin-right: 12px;
+            }
+
+            svg{
+                width: auto;
+            }
+        }
+    }
+}
+
+@include create-mq($md-width) {
+    .menu {
+        flex-wrap: nowrap;
+    }
+}
