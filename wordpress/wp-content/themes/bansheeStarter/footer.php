@@ -67,6 +67,7 @@ $footer_link = get_field("footer_link", 'option');
                                         ?>
                                         <div>
                                             <a  class="text-xs" href="mailto:<?php echo $footer_email?>" target="_blank"><?php echo $footer_email; ?></a>
+                                            <br></br>
                                             <a class="text-xs" href="<?php echo $phone_link; ?>"><?php echo $phone_text; ?></a>
                                         </div>
                                     <?php endif; ?>
