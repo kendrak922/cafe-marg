@@ -25,9 +25,10 @@
     }
   
     li.btn a {
+      background-color:  transparent;
       color: swatch('Neutral');
       &:hover {
-        color: swatch('Neutral');
+        color: swatch('LightNeutral');
       }
     }
   }

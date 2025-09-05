@@ -113,12 +113,6 @@
         }
     }
 
-    .btn--primary {
-        margin-top: 4px;
-        @include create-mq($lg-width) {
-            margin-left: 50px;
-        }
-    }
     svg {
         margin: auto;
         @include create-mq($lg-width) {

@@ -82,11 +82,12 @@ $footer_link = get_field("footer_link", 'option');
                                                         <?php 
                                                             $link = $social['social_link'];
                                                             $title = $social['social_title'];
-                                                            $icon = $social['social_icon']['url'];
+                                                            $icon = $social['social_icon'];
+                                                            $size = 'full';
                                                         
                                                         ?>
                                                         <a href="<?php echo $link; ?>" target="_blank">
-                                                            <img src="<?php echo $icon; ?>" height="40px" width="40px" />
+                                                            <?php echo wp_get_attachment_image($icon, $size); ?>
                                                         </a>
                                                 <?php endforeach;?>
                                             </div>

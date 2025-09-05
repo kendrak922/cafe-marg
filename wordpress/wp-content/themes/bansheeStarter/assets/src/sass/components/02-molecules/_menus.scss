@@ -114,16 +114,20 @@ $menuHeight: (
           }
         }
 
-        &.btn--primary {
-          a {
-            color: swatch('Secondary');
-            &:after {
-              content : none;
-            }
+      }
+      &.btn--primary {
+        a {
+          background-color:  swatch('Secondary');;
+          color: swatch('LightNeutral');
+          border-radius: 50px;
+          &:after {
+            content : none;
+          }
+          &:hover {
+            background-color:  swatch('PrimaryHover');;
           }
         }
       }
-
       // &>a,
       // &>.sub-menu--toggle-contain {
       //   body.scrolled & {
