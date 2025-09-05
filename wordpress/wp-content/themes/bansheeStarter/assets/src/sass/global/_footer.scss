@@ -18,6 +18,7 @@
         justify-content: center;
         @include create-mq($md-width) {
             justify-content: flex-start;
+            align-items: center;
         }
     }
 
