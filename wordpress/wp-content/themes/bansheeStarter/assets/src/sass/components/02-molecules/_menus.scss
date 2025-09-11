@@ -116,10 +116,17 @@ $menuHeight: (
 
       }
       &.btn--primary {
+        order: 1;
+        @include create-mq($lg-width) {
+          order: 0;
+        }
+
         a {
-          background-color:  swatch('Secondary');;
-          color: swatch('LightNeutral');
           border-radius: 50px;
+          @include create-mq($md-width) {
+            background-color:  swatch('Secondary');;
+            color: swatch('LightNeutral');
+          }
           &:after {
             content : none;
           }
@@ -244,7 +251,7 @@ $menuHeight: (
     &--main {
       & {
         @include font.largeNav();
-        margin-top: rem(50);
+        margin-top: rem(20);
         flex-direction: column;
         gap: 2rem;
         align-items: center;
@@ -256,6 +263,7 @@ $menuHeight: (
           font-family: $font-stack-primary;
           font-size: 1rem;
           padding: 8px 20px;
+          
         }
       }
 

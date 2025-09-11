@@ -27,7 +27,11 @@ section.block--hero-banner {
     }
 
     .container {
-
+        height: 70vh;
+        align-items: center;
+        @include create-mq($md-width) {
+            height: auto;
+        }
         &[data-content-align-x='right'] {
             justify-content: flex-end;
 
