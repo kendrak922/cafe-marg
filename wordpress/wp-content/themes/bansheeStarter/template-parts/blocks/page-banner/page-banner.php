@@ -17,7 +17,8 @@ $blocks_allowed = array(
     'core/paragraph',
     'yoast-seo/breadcrumbs',
     'acf/image',
-    'acf/spacer'
+    'acf/spacer',
+    'acf/container'
 );
 $blocks_template = array(
     array('core/heading', array()),
