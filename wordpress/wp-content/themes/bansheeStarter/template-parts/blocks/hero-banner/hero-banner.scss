@@ -3,7 +3,7 @@
 /******************************
     BLOCK: Hero Banner
 ******************************/
-section.block--hero-banner {
+body:not(.wp-admin) main section.block--hero-banner {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -70,40 +70,51 @@ section.block--hero-banner {
             // }
         }
     }
-
-}
-
-.hero-banner {
-    &__image {
-        @include create-mq($md-width) {
-            // flex-basis: 48%;
-        }
-    }
-
-    &__content {
-        max-width: 1000px;
-        position: relative;
-        z-index: 1;
-        padding: 12px;
-        @include create-mq($md-width) {
-            padding: 48px;
-            right: auto;
-        }
-        @include create-mq($lg-width) {
-
-        }
-        img {
-            right: 0;
-            max-width: 76px;
-            position: absolute;
+    .hero-banner {
+        &__image {
             @include create-mq($md-width) {
-                right: 50px;
+                // flex-basis: 48%;
             }
         }
-        h1,h2,h3,h4 {
-            margin:0;
+    
+        &__content {
+            max-width: 1000px;
+            position: relative;
+            z-index: 1;
+            padding: 12px;
+    
+            @include create-mq($md-width) {
+                padding: 48px;
+                right: auto;
+            }
+            @include create-mq($lg-width) {
+    
+            }
+            h1 {
+                font-size: 2rem!important;
+                @include create-mq($sm-width) {
+                    font-size: 3rem!important;
+                }
+                @include create-mq($md-width) {
+                    font-size: 5rem!important; //80
+                }
+            }
+            img {
+                right: 0;
+                max-width: 76px;
+                position: absolute;
+                @include create-mq($md-width) {
+                    right: 50px;
+                }
+            }
+            h1,h2,h3,h4 {
+                margin:0;
+            }
         }
+    
     }
+    
+    
 
 }
 
