@@ -6,7 +6,14 @@ section.u-section{
             clip-path: ellipse(90% 100% at top)
         }
         &Half {
-            background-size: 50%;
+            background-size: 100% 200px;
+            background-position-y: top!important;
+            min-height: 400px;
+            @include create-mq($sm-width) {
+                background-size: 50%;
+                background-position-y: center!important;
+            }
+
         }
         &Full {
             background-size: cover;

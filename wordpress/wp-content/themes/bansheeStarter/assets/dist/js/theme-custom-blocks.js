@@ -10,19 +10,4 @@
           el: '.swiper-pagination',
         },
       });
-  }
-  window.addEventListener('load', function () {
-    const gridElem = document.querySelector('.testimonial--desktop');
-  
-    if (gridElem) {
-      imagesLoaded(gridElem, function () {
-        new Masonry(gridElem, {
-          itemSelector: '.testimonial__single',
-          columnWidth: 520,
-          gutter: 40,
-        });
-      });
-    } else {
-      console.warn("No .testimonial element found.");
     }
-  });
