@@ -537,6 +537,14 @@ body.wp-admin {
             &.u-textColorWhite,
             .u-textColorWhite & {
                 color: swatch('White');
+                background-color: swatch('Black');
+                padding: 12px;
+                display: inline-block;
+                @include create-mq($md-width) {
+                    background-color: transparent;
+                    padding: unset;
+                }
+                
             }
             &.u-textColorPrimary,
             .u-textColorPrimary & {
