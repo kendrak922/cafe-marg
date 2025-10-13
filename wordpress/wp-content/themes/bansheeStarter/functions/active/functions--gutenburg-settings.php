@@ -132,7 +132,12 @@ add_theme_support(
       'name'  => esc_attr__('brand: yellow', 'themeLangDomain'),
       'slug'  => 'Yellow',
       'color' => '#FCFDAF',
-     )   
+     ), 
+     array(
+        'name'  => esc_attr__('polaroid', 'themeLangDomain'),
+        'slug'  => 'Polaroid',
+        'color' => '#B9962F',
+     ),  
     ) 
 );
 
