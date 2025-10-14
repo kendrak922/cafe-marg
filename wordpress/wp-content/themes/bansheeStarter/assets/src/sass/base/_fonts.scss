@@ -545,3 +545,20 @@ body.wp-admin {
         }
     }
 }
+
+.moo-choose-category {
+    font-family: $font-stack-secondary;
+}
+
+.moo-stick-to-content ul {
+    font-family: $font-stack-primary;
+    text-transform: none;
+}
+
+#moo_OnlineStoreContainer #moo-onlineStore-items .moo-menu-category .moo-menu-category-title .moo-title {
+    font-family: $font-stack-secondary;
+}
+
+.moo-row span, .moo-row p {
+    font-family: $font-stack-primary;
+}
