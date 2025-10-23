@@ -90,7 +90,7 @@ if ($header_button_link) {
                                     $logo = get_field('global_imagery', 'options') ? get_field('global_imagery', 'options')['header_logo'] : "";
                                     $darkmodeLogo = get_field('global_imagery', 'options') ? get_field('global_imagery', 'options')['header_logo_dark_mode'] : "";
                                     ?>
-                                <a href="<?php bloginfo('url'); ?>" class="logo header__logo" aria-label="Link to homepage">
+                                <a href="https://cafe-marg.com" class="logo header__logo" aria-label="Link to homepage">
                                     <?php if ($logo) : ?>
                                         <img height="100px" width="140px" class="lightModeLogo" src="<?php echo $logo['url']; ?>" alt="Cafe Marguerite">
                                             <?php if ($darkmodeLogo) : ?>

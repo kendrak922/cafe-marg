@@ -42,7 +42,8 @@ $footer_link = get_field("footer_link", 'option');
     <section class="footer__main">
         <div class="container container--wide">
         <div class="footer__logo">
-                <a href="<?php bloginfo('url'); ?>"  aria-label="Link to homepage">
+            //absolute path to homepage because of multisite
+                <a href="https://cafe-marg.com"  aria-label="Link to homepage">
                     <?php if (get_field('global_imagery', 'options')['footer_logo']) : $logo = get_field('global_imagery', 'options')['footer_logo']; ?>
                             <img height="166px" width="500px" src="<?php echo $logo['url']; ?>" alt="Banshee Starter Logo">
                     <?php elseif (file_exists($themeGlobals['theme_rel'] . '/assets/dist/imgs/logo-footer.png')) : ?>
