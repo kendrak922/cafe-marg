@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Calculate initial values on doc ready
   fn__general.update_global_vals()
   fn__general.toggle_listeners()
-  fn__general.leaving_site__check()
   fn__general.card_listeners()
   fn__general.alterform()
 

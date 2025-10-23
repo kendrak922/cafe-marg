@@ -530,7 +530,6 @@ class Functions__Animation {
 class Functions__General {
   constructor(context = 'main') {
     this.context = context //to call this class in multiple places with an obvious semantic context change
-    this.leaving_site__check = this.leaving_site__check.bind(this)
     this.addNoOpener = this.addNoOpener.bind(this)
     this.addNewTabMessage = this.addNewTabMessage.bind(this)
   }
@@ -865,41 +864,6 @@ class Functions__General {
     } else {
       console.log(cname + ' cookie is NOT set!')
     }
-  }
-
-  /**
-   * You are leaving the site modal
-   * */
-  leaving_site__check() {
-    document.querySelectorAll('a:not(.modaal)').forEach((link) => {
-      var hostRegExp = new RegExp(window.location.host)
-
-      if (!hostRegExp.test(link.href)) {
-        // link.addEventListener('click', (event) => {
-        //   alert('LEAVING??')
-        //   event.preventDefault()
-        //   event.stopPropagation()
-        //   window.open(link.href, '_blank')
-        // })
-        jQuery(link).modaal({
-          type: 'confirm',
-          overlay_opacity: '.9',
-          confirm_button_text: 'Confirm',
-          confirm_cancel_button_text: 'Cancel',
-          confirm_title: 'You are now leaving this site',
-          confirm_content: '<p>Would you like to leave this site?</p>',
-          confirm_callback: function () {
-            // alert('you have confirmed this action')
-            window.open(link.href, '_blank')
-          },
-          confirm_cancel_callback: function () {
-            // alert('you have cancelled this action')
-          },
-        })
-        this.addNoOpener(link)
-        this.addNewTabMessage(link)
-      }
-    })
   }
 
   addNoOpener(link) {
@@ -1491,7 +1455,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Calculate initial values on doc ready
   fn__general.update_global_vals()
   fn__general.toggle_listeners()
-  fn__general.leaving_site__check()
   fn__general.card_listeners()
   fn__general.alterform()
 
