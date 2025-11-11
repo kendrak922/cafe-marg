@@ -27,7 +27,7 @@ section.block--page-banner {
 }
 
 body.single-tribe_events {
-    .page-banner {
+    section.block--page-banner:first-of-type {
         display: none;
     } 
 }
