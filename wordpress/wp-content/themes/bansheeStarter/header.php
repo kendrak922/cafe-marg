@@ -6,7 +6,7 @@
 
 use Lean\Load;
 
-// Declare global variables
+// Declare global variuyyles
 global $themeGlobals;
 
 $darkmode = get_field('dark_mode') == 'true' ? 'u-darkMode' : '';

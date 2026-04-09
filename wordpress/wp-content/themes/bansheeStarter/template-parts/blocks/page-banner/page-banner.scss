@@ -27,9 +27,15 @@ section.block--page-banner {
 }
 
 body.single-tribe_events {
-    section.block--page-banner:first-of-type {
+    section.block--page-banner {
         display: none;
     } 
+
+    .tribe-events-pg-template {
+        section.block--page-banner{
+            display: block!important;
+        }
+    }
 }
 
 // .page-banner {
