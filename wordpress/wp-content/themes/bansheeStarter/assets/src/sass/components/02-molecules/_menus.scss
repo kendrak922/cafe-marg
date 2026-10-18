@@ -91,12 +91,6 @@ $menuHeight: (
         a {
           color: swatch('LightNeutral');
           display: block;
-
-          @include create-mq($lg-width) {
-            padding:  1rem 0;
-            color: swatch('Primary');
-
-          }
         }
       }
 
@@ -267,31 +261,11 @@ $menuHeight: (
         }
       }
 
-      @include create-mq($lg-width) {
-        margin-top: 0;
-        gap: 4rem;
-        flex-direction: row;
-        align-items: flex-start;
-      }
-
       @include create-mq($xl-width) {
         font-size: 1rem;
       }
 
       &>.menu-item {
-
-        &>a,
-        &>.sub-menu--toggle-contain {
-          @include create-mq($lg-width) {
-            font-size: 1rem;
-            padding: 1rem 2rem;
-
-            button {
-              display: none !important; // remove to allow desktop dropdown
-            }
-          }
-        }
-
         &>.sub-menu--toggle-contain {
           button {
             display: none !important; // remove to allow desktop dropdown
@@ -370,44 +344,20 @@ header .menu-wrapper--main {
   visibility: hidden;
   width: 100%;
 
-
   @include create-mq($lg-width) {
-    align-items: center;
-    background: none;
-    border: unset;
-    display: flex !important;
-    height: auto;
-    left: unset;
-    max-height: none;
-    max-width: none;
-    opacity: 1;
-    overflow: unset;
-    position: relative;
-    right: unset;
-    top: 0;
-    transform: unset;
-    transition: padding ease-in-out $t-default;
-    visibility: visible;
-    width: auto;
+    height: calc(100vh - map.get($menuHeight, 'lg'));
+    height: calc(100dvh - map.get($menuHeight, 'lg'));
+    top: map.get($menuHeight, 'lg');
   }
+
 
   nav {
     align-items: flex-start;
     flex-direction: column;
 
-    @include create-mq($lg-width) {
-      align-items: flex-end;
-      flex-direction: row;
-      flex-wrap: nowrap;
-    }
-
     div {
       align-items: flex-end;
       width: 100%;
-
-      @include create-mq($lg-width) {
-        width: auto;
-      }
     }
   }
 
@@ -420,28 +370,12 @@ header .menu-wrapper--main {
       height: calc(100vh - map.get($menuHeight, 'sm') - map.get($adminHeight, 'lg'));
       height: calc(100dvh - map.get($menuHeight, 'sm') - map.get($adminHeight, 'lg'));
     }
-
-    @include create-mq($lg-width) {
-      height: auto;
-    }
   }
 
   body.active--mobileMenu & {
     opacity: 1;
     transform: translate(0, 0);
     visibility: visible;
-
-    @include create-mq($lg-width) {
-      left: unset;
-      right: 0;
-    }
-  }
-
-  body.scrolled & {
-    @include create-mq($lg-width) {
-      max-height: calc(100vh - map.get($menuHeight, 'scroll'));
-      max-height: calc(100dvh - map.get($menuHeight, 'scroll'));
-    }
   }
 
   body.admin-bar.scrolled & {

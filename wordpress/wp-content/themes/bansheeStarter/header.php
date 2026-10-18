@@ -70,8 +70,8 @@ if ($header_button_link) {
 
                 <div data-molecule="header-bar" class="header-bar header-bar--main">
                     <div class="container container--ultra-wide">
-                        <div class="header-bar__wrapper grid grid--justify-between grid--no-wrap grid--align-center grid-lg--justify-center">
-                            <div class="header-bar__item u-hidden u-lg-flex">
+                        <div class="header-bar__wrapper grid grid--justify-between grid--no-wrap grid--align-center">
+                            <div class="header-bar__item u-hidden">
                             <nav class="menu-wrapper__content"  aria-label="Site Navigation">
                                 <?php
                                             $header_nav_two = [
@@ -105,7 +105,7 @@ if ($header_button_link) {
 
                             <div class=" header-bar__item">
 
-                                <span class="u-lg-hidden u-marginLeft6gu">
+                                <span class="u-marginLeft6gu">
                                     <button id="menu-toggle" class="menu-toggle" aria-label="Open the Menu" aria-expanded="false" aria-controls="menu" tabindex="0">
                                         <span class="menu-toggle__icon"></span>
                                         <span class="menu-toggle__icon"></span>
@@ -129,7 +129,7 @@ if ($header_button_link) {
                                            <?php
                                             $header_nav_two = [
                                             'theme_location'    => 'main-menu--two',
-                                            'menu_class'        => 'menu menu--main u-lg-hidden',
+                                            'menu_class'        => 'menu menu--main',
                                             'walker'            => new bansheeStarter_nav_walker()
                                             ];
                                             wp_nav_menu($header_nav_two); ?>
